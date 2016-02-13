@@ -30,10 +30,10 @@ class CreateClaims < ActiveRecord::Migration
         t.string :trmntndt  
         t.float :rnhctrs   
         t.string :ttltpcd   
-        t.multi_polygon :geog, :srid => 4326
+        t.multi_polygon :geom, :srid => 4326
     end   
 
-    add_index :claims, :geom, spatial:  true
+    add_index :claims, :geom, using: :gist
 
     # change_table :claims do |t|
     #   t.index :geog, using: :gist
