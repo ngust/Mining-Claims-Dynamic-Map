@@ -47,5 +47,6 @@ group :development do
 #My custom gems
   gem 'activerecord-postgis-adapter'
   gem 'therubyracer'
+  gem 'rgeo-geojson'
 end
 
